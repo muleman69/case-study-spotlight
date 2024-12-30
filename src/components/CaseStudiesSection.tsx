@@ -80,7 +80,7 @@ export function CaseStudiesSection() {
             Case Studies
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto px-6 text-lg">
-            Explore how we've helped healthcare organizations solve complex challenges and drive innovation.
+            Explore how we've helped other companies solve complex logistical challenges and drive innovation.
           </p>
         </motion.div>
 

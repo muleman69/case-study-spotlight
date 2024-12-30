@@ -1,7 +1,6 @@
 'use client'
 
 import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 import { type LucideIcon } from 'lucide-react'
 
 const phaseColors = {
@@ -45,13 +44,14 @@ const phaseColors = {
 interface StepCardProps {
   title: string
   content: string
+  bullets?: string[]
   icon: LucideIcon
   index: number
   isActive: boolean
   id: string
 }
 
-export function StepCard({ title, content, icon: Icon, index, isActive, id }: StepCardProps) {
+export function StepCard({ title, content, bullets, icon: Icon, index, isActive, id }: StepCardProps) {
   const colors = phaseColors[id as keyof typeof phaseColors]
 
   return (
@@ -61,55 +61,58 @@ export function StepCard({ title, content, icon: Icon, index, isActive, id }: St
       transition={{ duration: 0.4, delay: index * 0.1 }}
       viewport={{ once: true, margin: "-100px" }}
     >
-      <Card className={`
-        relative overflow-hidden
+      <div className={`
+        relative overflow-hidden rounded-lg
         border border-white/5
         backdrop-blur-md
         transition-all duration-500
         bg-gradient-to-br ${isActive ? colors.bg : 'from-gray-900/50 to-gray-900/30'}
         hover:bg-gradient-to-br hover:${colors.bg}
         transform hover:-translate-y-1
+        p-8
       `}
       style={{
         boxShadow: isActive ? colors.glow : 'none'
       }}
       >
-        <CardHeader>
-          <CardTitle className="flex items-center gap-3 text-2xl font-bold">
-            <motion.div
-              className={`
-                p-2 rounded-lg
-                ${isActive ? colors.icon : 'bg-gray-800/50 text-gray-400'}
-                transition-colors duration-300
-              `}
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              <Icon className="h-6 w-6" />
-            </motion.div>
-            <span className={isActive ? colors.text : 'text-white'}>
-              {title}
-            </span>
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <p className="text-gray-400 leading-relaxed">
-            {content}
-          </p>
-        </CardContent>
+        <div className="flex items-center gap-3 mb-6">
+          <motion.div
+            className={`
+              p-2 rounded-lg
+              ${isActive ? colors.icon : 'bg-gray-800/50 text-gray-400'}
+              transition-colors duration-300
+            `}
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            <Icon className="h-6 w-6" />
+          </motion.div>
+          <h3 className={`text-2xl font-bold ${isActive ? colors.text : 'text-white'}`}>
+            {title}
+          </h3>
+        </div>
+
+        <div className="space-y-4">
+          {bullets?.map((bullet, i) => (
+            <div key={i} className="flex items-start gap-3">
+              <div className={`mt-2 w-1.5 h-1.5 rounded-full ${isActive ? colors.text : 'bg-gray-400'} flex-shrink-0`} />
+              <p className={`leading-relaxed ${isActive ? 'text-gray-200' : 'text-gray-400'}`}>{bullet}</p>
+            </div>
+          ))}
+        </div>
+
         <div className={`
           absolute inset-0 border-2 rounded-lg transition-opacity duration-300
           ${isActive ? colors.border : 'border-transparent'}
         `} />
         
-        {/* Gradient overlay */}
         <div className={`
           absolute inset-0 opacity-0 hover:opacity-100
           transition-opacity duration-500
           bg-gradient-to-br ${colors.bg}
           mix-blend-overlay
         `} />
-      </Card>
+      </div>
     </motion.div>
   )
 } 

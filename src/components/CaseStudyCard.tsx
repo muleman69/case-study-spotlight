@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Stethoscope, Building2, BookOpen } from 'lucide-react';
+import { ArrowRight, Stethoscope, Building2, BookOpen, DollarSign, Truck, LucideIcon } from 'lucide-react';
 
 interface CaseStudyCardProps {
   title: string;
@@ -7,18 +7,19 @@ interface CaseStudyCardProps {
   image: string;
   tags: string[];
   link: string;
-  category: 'healthcare' | 'finance' | 'publishing';
-  testimonial?: {
+  category: "healthcare" | "finance" | "publishing" | "logistics";
+  testimonial: {
     quote: string;
     author: string;
     role: string;
   };
 }
 
-const categoryIcons = {
+const categoryIcons: Record<CaseStudyCardProps['category'], LucideIcon> = {
   healthcare: Stethoscope,
-  finance: Building2,
-  publishing: BookOpen
+  finance: DollarSign,
+  publishing: BookOpen,
+  logistics: Truck
 };
 
 export function CaseStudyCard({

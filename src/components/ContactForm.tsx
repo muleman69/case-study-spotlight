@@ -12,24 +12,24 @@ export default function ContactForm() {
           <div className="space-y-12">
             <div>
               <h2 className="text-6xl font-bold text-white mb-4">GET IN TOUCH</h2>
-              <p className="text-white/80">Trusted by CatholicTV, NLC Mutual, SDPAA</p>
+              <p className="text-white/80">Trusted by CatholicTV, NLC Mutual, SDPAA +++</p>
             </div>
 
             {/* Testimonial */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 shadow-lg">
               <div className="flex items-start gap-6">
                 <img 
-                  src="https://ik.imagekit.io/buildable/Heart%20Failure%20App/Ryan%20Draughn.jpeg?updatedAt=1734508090587" 
-                  alt="Ryan Draughn"
+                  src="https://ik.imagekit.io/buildable/Kevin%20Dodds%20Wildwood.jpeg?updatedAt=1735537695872" 
+                  alt="Kevin Dodds"
                   className="w-16 h-16 rounded-full object-cover"
                 />
                 <div className="space-y-4">
                   <blockquote className="text-white/80 italic text-lg">
-                    "The team at Buildable are the most experienced and trusted engineers in the React Native community and ecosystem."
+                    "The new system transformed our logistics and quoting processes. Buildable enabled us to eliminate our manual bottlenecks, deliver quotes faster, and focus on strategic growth."
                   </blockquote>
                   <div className="text-white">
-                    <p className="font-medium">Ryan Draughn</p>
-                    <p className="text-sm text-white/60">Director of Information Technology / NLC Mutual</p>
+                    <p className="font-medium">Kevin Dodds</p>
+                    <p className="text-sm text-white/60">President / Wildwood Trading Group</p>
                   </div>
                 </div>
               </div>
