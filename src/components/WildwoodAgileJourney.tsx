@@ -5,9 +5,9 @@ import { FloatingNav } from './dmaic-section/floating-nav';
 import { StepCard } from './dmaic-section/step-card';
 import { FloatingShapes } from './ui/floating-shapes';
 import { SectionTransition } from './ui/section-transition';
-import { steps } from './agile-journey/steps';
+import { agileSteps } from './agile-journey/steps';
 
-export default function WildwoodDMAICSection() {
+export default function WildwoodAgileJourney() {
   const [activeStep, setActiveStep] = useState(0);
   const sectionRef = useRef<HTMLDivElement>(null);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -92,9 +92,9 @@ export default function WildwoodDMAICSection() {
 
       {isInView && (
         <>
-          <TimelineIndicator steps={steps} activeStep={activeStep} />
+          <TimelineIndicator steps={agileSteps} activeStep={activeStep} />
           <FloatingNav
-            steps={steps}
+            steps={agileSteps}
             activeStep={activeStep}
             onStepClick={scrollToStep}
           />
@@ -102,7 +102,7 @@ export default function WildwoodDMAICSection() {
       )}
 
       <div className="relative z-10 max-w-3xl mx-auto space-y-12 lg:space-y-24">
-        {steps.map((step, index) => (
+        {agileSteps.map((step, index) => (
           <motion.div
             key={step.id}
             ref={(el) => (stepRefs.current[index] = el)}
@@ -114,7 +114,7 @@ export default function WildwoodDMAICSection() {
           >
             <StepCard
               id={step.id}
-              title={step.displayTitle}
+              title={step.title}
               content={step.content}
               bullets={step.bullets}
               icon={step.icon}

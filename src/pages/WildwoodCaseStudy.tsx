@@ -100,8 +100,8 @@ const WildwoodCaseStudy = () => {
 
       <ChallengeApproachSection />
 
-      {/* DMAIC Process Section */}
-      <section id="dmaic-section" className="relative py-24 min-h-screen bg-gradient-to-b from-gray-900 to-gray-950">
+      {/* Agile Journey Section */}
+      <section id="agile-journey" className="relative py-24 min-h-screen bg-gradient-to-b from-gray-900 to-gray-950">
         {/* Background decorative elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-0 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl" />
@@ -111,11 +111,8 @@ const WildwoodCaseStudy = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              DMAIC Framework
+              Agile Journey
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Our systematic approach to transforming lumber operations through data-driven process optimization
-            </p>
           </div>
 
           <WildwoodDMAICSection />

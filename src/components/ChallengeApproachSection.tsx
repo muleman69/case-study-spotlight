@@ -59,7 +59,7 @@ export default function ChallengeApproachSection() {
             
             <div className="space-y-4">
               <p className="text-gray-700 leading-relaxed">
-                Buildable partnered with Wildwood to digitally transform their freight rate and route management processes. We used a DMAIC (Define-Measure-Analyze-Improve-Control) framework to diagnose bottlenecks, streamline workflows, and implement cutting-edge automation.
+                Buildable partnered with Wildwood to digitally transform their freight rate and route management processes. Our project adopted the Agile framework to ensure flexibility, continuous improvement, and close collaboration with WTG throughout the development process.
               </p>
             </div>
           </motion.div>
