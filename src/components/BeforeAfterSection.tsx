@@ -7,17 +7,19 @@ const BeforeAfterSection = () => {
       
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
         {/* Before Section */}
-        <div className="space-y-6">
-          <div className="relative">
+        <div className="flex flex-col h-full">
+          <div className="relative flex-grow">
             <h3 className="text-2xl font-bold text-red-500 mb-4">Before</h3>
-            <img
-              src="https://ik.imagekit.io/buildable/Wildwood_Before.jpeg?updatedAt=1735539034040"
-              alt="Before - Manual Process"
-              className="w-full rounded-lg shadow-lg"
-            />
+            <div className="aspect-[16/10] relative">
+              <img
+                src="https://ik.imagekit.io/buildable/Wildwood_Before.jpeg?updatedAt=1735539034040"
+                alt="Before - Manual Process"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-6 space-y-4">
+          <div className="bg-gray-800 rounded-lg p-6 space-y-4 mt-6">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center">
@@ -48,17 +50,19 @@ const BeforeAfterSection = () => {
         </div>
 
         {/* After Section */}
-        <div className="space-y-6">
-          <div className="relative">
+        <div className="flex flex-col h-full">
+          <div className="relative flex-grow">
             <h3 className="text-2xl font-bold text-green-500 mb-4">After</h3>
-            <img
-              src="https://ik.imagekit.io/buildable/Wildwood_After.jpeg?updatedAt=1735539034118"
-              alt="After - Automated Solution"
-              className="w-full rounded-lg shadow-lg"
-            />
+            <div className="aspect-[16/10] relative">
+              <img
+                src="https://ik.imagekit.io/buildable/Wildwood_After.jpeg?updatedAt=1735539034118"
+                alt="After - Automated Solution"
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+            </div>
           </div>
           
-          <div className="bg-gray-800 rounded-lg p-6 space-y-4">
+          <div className="bg-gray-800 rounded-lg p-6 space-y-4 mt-6">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
                 <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
