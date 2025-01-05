@@ -66,7 +66,7 @@ export function CaseStudiesSection() {
   return (
     <section className="relative py-32">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-50 via-gray-100 to-gray-200" />
+      <div className="absolute inset-0 bg-[#217e88]" />
       
       {/* Content */}
       <div className="relative">
@@ -76,10 +76,10 @@ export function CaseStudiesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Case Studies
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto px-6 text-lg">
+          <p className="text-white/80 max-w-2xl mx-auto px-6 text-lg">
             Explore how we've helped other companies solve complex logistical challenges and drive innovation.
           </p>
         </motion.div>
@@ -90,14 +90,14 @@ export function CaseStudiesSection() {
           <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 z-10 flex items-center justify-between w-[calc(100%-8rem)] max-w-7xl pointer-events-none">
             <button
               onClick={() => scroll('left')}
-              className="p-3 rounded-full bg-white shadow-lg hover:bg-gray-50 text-gray-800 transition-colors pointer-events-auto"
+              className="p-3 rounded-full bg-white/20 backdrop-blur-sm shadow-lg hover:bg-white/30 text-white transition-colors pointer-events-auto"
               disabled={activeIndex === 0}
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="p-3 rounded-full bg-white shadow-lg hover:bg-gray-50 text-gray-800 transition-colors pointer-events-auto"
+              className="p-3 rounded-full bg-white/20 backdrop-blur-sm shadow-lg hover:bg-white/30 text-white transition-colors pointer-events-auto"
               disabled={activeIndex === caseStudies.length - 2}
             >
               <ChevronRight className="w-5 h-5" />
