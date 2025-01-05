@@ -52,7 +52,7 @@ const BeforeAfterSection = () => {
         {/* After Section */}
         <div className="flex flex-col h-full">
           <div className="relative flex-grow">
-            <h3 className="text-2xl font-bold text-green-500 mb-4">After</h3>
+            <h3 className="text-2xl font-bold text-[#217e88] mb-4">After</h3>
             <div className="aspect-[16/10] relative">
               <img
                 src="https://ik.imagekit.io/buildable/Wildwood_After.jpeg?updatedAt=1735539034118"
@@ -65,8 +65,8 @@ const BeforeAfterSection = () => {
           <div className="bg-gray-800 rounded-lg p-6 space-y-4 mt-6">
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
-                  <span className="text-green-500 text-xl">✓</span>
+                <div className="w-6 h-6 rounded-full bg-[#217e88]/20 flex items-center justify-center">
+                  <span className="text-[#217e88] text-xl">✓</span>
                 </div>
               </div>
               <span className="text-gray-300">Automated rate engine</span>
@@ -74,8 +74,8 @@ const BeforeAfterSection = () => {
             
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
-                  <span className="text-green-500 text-xl">✓</span>
+                <div className="w-6 h-6 rounded-full bg-[#217e88]/20 flex items-center justify-center">
+                  <span className="text-[#217e88] text-xl">✓</span>
                 </div>
               </div>
               <span className="text-gray-300">Real-time quotes</span>
@@ -83,8 +83,8 @@ const BeforeAfterSection = () => {
             
             <div className="flex items-start space-x-4">
               <div className="flex-shrink-0">
-                <div className="w-6 h-6 rounded-full bg-green-500/20 flex items-center justify-center">
-                  <span className="text-green-500 text-xl">✓</span>
+                <div className="w-6 h-6 rounded-full bg-[#217e88]/20 flex items-center justify-center">
+                  <span className="text-[#217e88] text-xl">✓</span>
                 </div>
               </div>
               <span className="text-gray-300">Dynamic pricing</span>
