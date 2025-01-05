@@ -35,7 +35,7 @@ export function CaseStudyCard({
 
   return (
     <motion.div
-      className="relative group rounded-2xl overflow-hidden cursor-pointer h-[320px] bg-gradient-to-br from-[#00d5c4] to-[#00a396]"
+      className="relative group rounded-2xl overflow-hidden cursor-pointer h-[320px] bg-[#217e88]"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
