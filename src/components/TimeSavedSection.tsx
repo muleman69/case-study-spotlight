@@ -8,19 +8,19 @@ export function TimeSavedSection() {
   
   const { scrollYProgress } = useScroll({
     target: sectionRef,
-    offset: ["start end", "center center"]
+    offset: ["start center", "end center"]
   });
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
-      const value = Math.min(95, latest * 190); // Max value is 95
+      const value = Math.min(95, latest * 190);
       count.set(value);
     });
     return () => unsubscribe();
   }, [scrollYProgress]);
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.8, 1, 1, 0.8]);
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.3, 1, 1, 0.3]);
+  const scale = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0.95, 1, 1, 0.95]);
 
   const handleClick = () => {
     const dmaicSection = document.getElementById('dmaic-section');
@@ -30,7 +30,7 @@ export function TimeSavedSection() {
   };
 
   return (
-    <section ref={sectionRef} className="relative bg-[#0A0B14] text-white py-24 overflow-hidden">
+    <section ref={sectionRef} className="relative bg-[#0A0B14] text-white py-12 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Heartbeat Line */}
@@ -99,7 +99,7 @@ export function TimeSavedSection() {
           </div>
 
           <motion.h3
-            className="text-5xl font-bold mt-6 mb-8"
+            className="text-5xl font-bold mt-6 mb-6"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -108,7 +108,7 @@ export function TimeSavedSection() {
           </motion.h3>
 
           <motion.p
-            className="text-xl text-gray-400 mb-12"
+            className="text-xl text-gray-400 mb-8"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
