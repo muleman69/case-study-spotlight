@@ -2,11 +2,8 @@ import React from 'react';
 
 export default function ContactForm() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#2AC9A5] to-[#1A1B3D]" />
-      
-      <div className="relative max-w-[1600px] mx-auto px-6">
+    <section className="relative bg-gradient-to-br from-[#217e88] to-[#185f67] py-24">
+      <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left Side */}
           <div className="space-y-12">
